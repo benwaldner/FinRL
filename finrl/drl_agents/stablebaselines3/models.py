@@ -104,8 +104,8 @@ class DRLAgent:
         )
         return model
 
-    @staticmethod
-    def DRL_prediction(model, environment, deterministic=False):
+    @staticmethod # changed deterministic=True on both parts: 13-02-2022
+    def DRL_prediction(model, environment, deterministic=True):
         test_env, test_obs = environment.get_sb_env()
         """make a prediction"""
         account_memory = []
@@ -124,8 +124,8 @@ class DRLAgent:
                 break
         return account_memory[0], actions_memory[0]
 
-    @staticmethod
-    def DRL_prediction_load_from_file(model_name, environment, cwd, deterministic=False):
+    @staticmethod # changed deterministic=True on both parts but at least here for papertrading: 13-02-2022
+    def DRL_prediction_load_from_file(model_name, environment, cwd, deterministic=True):
         if model_name not in MODELS:
             raise NotImplementedError("NotImplementedError")
         try:
