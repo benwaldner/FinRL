@@ -25,9 +25,7 @@ setup(
     packages=find_packages(),
     install_requires=REQUIRES
                      + ["pyfolio @ git+https://github.com/quantopian/pyfolio.git#egg=pyfolio-0.9.2"]
-                     + [
-                         "elegantrl @ git+https://github.com/benwaldner/ElegantRL.git#egg=elegantrl"
-                     ],
+                     + ["elegantrl @ git+https://github.com/benwaldner/ElegantRL.git#egg=elegantrl"],
     # install_requires=REQUIRES,
     description="FinRL: Financial Reinforcement Learning Framework.",
     # long_description="FinRL is the first open-source framework to demonstrate the great potential of  \
